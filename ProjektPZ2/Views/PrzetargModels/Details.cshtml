@@ -1,0 +1,68 @@
+﻿@model ProjektPZ2.Models.PrzetargModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrzetargModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCreate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oferty)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Id oferty</th>
+                    <th>Cena</th>
+                </tr>
+                @foreach (var item in Model.Oferty)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OfferPrice)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

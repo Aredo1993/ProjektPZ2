@@ -1,0 +1,50 @@
+﻿@model ProjektPZ2.Models.OfertaModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OfertaModels</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrzetargModels.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrzetargModels.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfileModelsID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfileModelsID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfCreate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

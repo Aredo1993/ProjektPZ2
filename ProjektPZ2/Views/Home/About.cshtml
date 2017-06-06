@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ProjektPZ2.ViewModels.PrzetargDateGroup>
+@{
+    ViewBag.Title = "Przetarg Body Statistics";
+}
+<h2>Przetarg Body Statistics</h2>
+
+<table>
+    <tr align="center" valign="middle">
+        <th>
+            Data
+        </th>
+        <th>
+            Ilość Przetargów
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr align="center" valign="middle">
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfCreate)
+            </td>
+            <td>
+                @item.PrzetargCount
+            </td>
+        </tr>
+    }
+</table>
